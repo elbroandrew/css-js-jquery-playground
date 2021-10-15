@@ -1,11 +1,14 @@
-$(document).ready(function(){
-  $('.accordion-item__trigger').click(function(){
-    const parent = $(this).parent();
-    if(parent.hasClass('accordion-item--active')){
-      parent.removeClass('accordion-item--active');
+document.querySelectorAll('.accordion-item__trigger').forEach((item)=>
+  item.addEventListener('click', () => {
+    const parent = item.parentNode;
+    if(parent.classList.contains('accordion-item--active')){
+      parent.classList.remove('accordion-item--active');
     }else{
-      $('.accordion-item').removeClass('accordion-item--active');
-      parent.addClass('accordion-item--active');
+      document.querySelectorAll('.accordion-item').forEach((child) => child.classList.remove('accordion-item--active'));
+      parent.classList.toggle('accordion-item--active');
     }
-  });
-});
+
+
+  })
+)
+
