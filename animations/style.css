@@ -29,17 +29,17 @@
 .dropdown:hover ~ .first-animated{
   background-color: bisque;
   height: 100px;
-  transition: height 1s;
+  transition: height 1s linear 0s;
 }
 
 .dropdown:hover ~ .second-animated{
   background-color: coral;
   opacity: 1;
-  transition: opacity 1s;
+  transition: opacity 1s linear 1s;
 }
 
 .dropdown:hover ~ .third-animated{
   background-color: cornflowerblue;
   transform: skew(0deg);
-  transition: transform 1s;
+  transition: transform 1s linear 2s;
 }
