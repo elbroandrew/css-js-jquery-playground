@@ -16,6 +16,7 @@
   height: 0px;
   width: 0px;
   opacity: 0;
+  animation: first-animation-out 3s;
 
 }
 
@@ -23,15 +24,24 @@
   height: 100px;
   width: 100px;
   opacity: 1;
-  animation: first-animation 3s;
+  animation: first-animation-in 3s;
 }
 
 
-@keyframes first-animation {
+@keyframes first-animation-in {
   /* from {} to {} */
   0% {height: 0px; width: 0px; opacity: 0;}
   25% {transform: rotate(90deg);}
   50% {background-color: crimson;}
   75% {background-color: darkgray;}
   100% {height: 100px; width: 100px; opacity: 1;}
+}
+
+@keyframes first-animation-out {
+  /* from {} to {} */
+  100% {height: 0px; width: 0px; opacity: 0;}
+  75% {transform: rotate(90deg);}
+  50% {background-color: crimson;}
+  25% {background-color: darkgray;}
+  0% {height: 100px; width: 100px; opacity: 1;}
 }
