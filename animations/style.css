@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+}
+
+.dropdown{
+  font-size: 40px;
+}
+
+.animated{
+  width: 100px;
+  height: 100px;
+}
+
+.first-animated{
+  background-color: bisque;
+  height: 0px;
+}
+
+.second-animated{
+  background-color: coral;
+  opacity: 0;
+}
+
+.third-animated{
+  background-color: cornflowerblue;
+  transform: skew(90deg);
+}
+
+.dropdown:hover ~ .first-animated{
+  background-color: bisque;
+  height: 100px;
+}
+
+.dropdown:hover ~ .second-animated{
+  background-color: coral;
+  opacity: 1;
+}
+
+.dropdown:hover ~ .third-animated{
+  background-color: cornflowerblue;
+  transform: skew(0deg);
+}
